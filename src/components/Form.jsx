@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 
 const Form = (props) => {
   const { handleAdd } = props;
-  const [nombre, setNombre] = useState('');
+  const [name, setName] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     handleAdd({
       done: false,
       id: (+new Date()).toString(),
-      nombre,
+      name,
     });
-    setNombre('');
+    setName('');
   };
 
   return (
@@ -20,11 +20,11 @@ const Form = (props) => {
         <input
           type="text"
           className="input-text"
-          placeholder="Nombre de la tarea"
-          value={nombre}
-          onChange={(e) => setNombre(e.target.value)}
+          placeholder="task name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
         />
-        <button className="btn-add" disabled={nombre ? '' : 'disabled'}>
+        <button className="btn-add" disabled={name ? '' : 'disabled'}>
           Add Task
         </button>
       </div>

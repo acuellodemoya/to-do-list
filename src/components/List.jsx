@@ -26,7 +26,7 @@ const List = (props) => {
       onDelete={onDelete}
     />
   ));
-  return <div>{list.length ? tasks : 'No Tasks'}</div>;
+  return <div>{list.length ? tasks : <h2>No Tasks</h2>}</div>;
 };
 
 export default List;
