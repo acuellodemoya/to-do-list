@@ -18,7 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build -r https://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@github.com/acuellodemoya/to-do-list"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
